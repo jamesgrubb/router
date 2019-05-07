@@ -12,22 +12,17 @@ const Label = styled.label`
 text-transform: uppercase;
 `
 
-const HiddenInput = styled.input.attrs({
-    name : "form-name",
-    value : "contact"
-})
-
-const TextInput = styled.input.attrs({
-})
+const HiddenInput = styled.input`
 `
-padding: 2em;
 
+const TextInput = styled.input`
+padding: 2em;
 `
 
 const FormWarapper = () => {
-
+return(
     <Form>
-        <HiddenInput />
+        <HiddenInput type="hidden" name="form-name" value="contact"/>
         <p>
             <Label>
                 Your Name {<TextInput name="name" type="text" />}
@@ -42,7 +37,7 @@ const FormWarapper = () => {
                 <button type="submit">Submit</button>
                 </p>
     </Form>
-
+)
 }
 
 export default FormWarapper
