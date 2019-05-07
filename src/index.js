@@ -4,6 +4,7 @@ import { Route, NavLink, BrowserRouter as Router, Switch} from 'react-router-dom
 import { createGlobalStyle, ThemeProvider } from 'styled-components';
 // COMPONENTS
 import { Container } from './componets/Container/Container';
+import Form from './componets/Form/Form';
 import Users from './componets/Users/index';
 import Contacts from './componets/Contact/index';
 import App from './App';
@@ -72,6 +73,7 @@ return(
                 <Route path="/Contact" component={Contacts} />
                 <Route component={NotFound} />
             </Switch>
+            <Form />
             </Container>
         </div>
     </Router>
